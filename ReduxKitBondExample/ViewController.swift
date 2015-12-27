@@ -13,19 +13,15 @@ import ReduxKitBond
 
 class ViewController: UIViewController {
     
-    let store =  ReduxKitBond.createStore(applicationReducer)
-
+    let viewModel = ViewModel()
+    
     @IBOutlet weak var counterLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let counterStream = Observable(store.getState().counter)
-        store.subscribe { state in
-            counterStream.next(state.counter)
-        }
-        counterStream.map{"\($0)"}.bindTo(counterLabel.bnd_text)
+        viewModel.counter.map{"\($0)"}.bindTo(counterLabel.bnd_text)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +30,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func incrementCounter(sender: AnyObject) {
-        store.dispatch(IncrementAction())
+        viewModel.increment()
     }
 
     @IBAction func decrementCounter(sender: AnyObject) {
-        store.dispatch(DecrementAction())
+        viewModel.decrement()
     }
 }
 

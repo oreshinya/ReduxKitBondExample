@@ -24,6 +24,8 @@
 		ED0862EF1C2FB1EE0091C517 /* ReduxKitBond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0862EE1C2FB1EE0091C517 /* ReduxKitBond.framework */; };
 		ED0862F01C2FB1EE0091C517 /* ReduxKitBond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED0862EE1C2FB1EE0091C517 /* ReduxKitBond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED0862F21C2FB35C0091C517 /* applicationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0862F11C2FB35C0091C517 /* applicationReducer.swift */; };
+		ED0862F51C2FC2630091C517 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0862F41C2FC2630091C517 /* ViewModel.swift */; };
+		ED0862F91C2FC6150091C517 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0862F81C2FC6150091C517 /* AppStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		ED0862EB1C2FB1E10091C517 /* ReduxKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReduxKit.framework; path = Carthage/Build/iOS/ReduxKit.framework; sourceTree = "<group>"; };
 		ED0862EE1C2FB1EE0091C517 /* ReduxKitBond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReduxKitBond.framework; path = Carthage/Build/iOS/ReduxKitBond.framework; sourceTree = "<group>"; };
 		ED0862F11C2FB35C0091C517 /* applicationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = applicationReducer.swift; sourceTree = "<group>"; };
+		ED0862F41C2FC2630091C517 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		ED0862F81C2FC6150091C517 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 				ED0862B71C2FAE6F0091C517 /* Assets.xcassets */,
 				ED0862B91C2FAE6F0091C517 /* LaunchScreen.storyboard */,
 				ED0862BC1C2FAE6F0091C517 /* Info.plist */,
+				ED0862F41C2FC2630091C517 /* ViewModel.swift */,
+				ED0862F81C2FC6150091C517 /* AppStore.swift */,
 			);
 			path = ReduxKitBondExample;
 			sourceTree = "<group>";
@@ -327,9 +333,11 @@
 				ED0862E61C2FB0F40091C517 /* counterReducer.swift in Sources */,
 				ED0862B31C2FAE6F0091C517 /* ViewController.swift in Sources */,
 				ED0862E21C2FB0630091C517 /* DecrementAction.swift in Sources */,
+				ED0862F91C2FC6150091C517 /* AppStore.swift in Sources */,
 				ED0862B11C2FAE6F0091C517 /* AppDelegate.swift in Sources */,
 				ED0862E01C2FB0320091C517 /* IncrementAction.swift in Sources */,
 				ED0862F21C2FB35C0091C517 /* applicationReducer.swift in Sources */,
+				ED0862F51C2FC2630091C517 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
