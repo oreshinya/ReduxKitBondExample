@@ -12,21 +12,21 @@ import ReduxKitBond
 
 class ViewModel {
     
-    let store = AppStore.store
+    static let store = AppStore.store
     let counter: Observable<Int>
     
     init() {
-        self.counter = Observable(store.getState().counter)
-        store.subscribe { [unowned self] state in
+        self.counter = Observable(self.dynamicType.store.getState().counter)
+        self.dynamicType.store.subscribe { [unowned self] state in
             self.counter.next(state.counter)
         }
     }
     
     func increment() {
-        store.dispatch(IncrementAction())
+        self.dynamicType.store.dispatch(IncrementAction())
     }
     
     func decrement() {
-        store.dispatch(DecrementAction())
+        self.dynamicType.store.dispatch(DecrementAction())
     }
 }
